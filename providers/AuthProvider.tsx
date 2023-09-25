@@ -8,6 +8,7 @@ const AuthProvider = ({children}:{children:React.ReactNode}) => {
         {children}
     </SessionProvider>
   )
+  
 }
 
 export default AuthProvider
