@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "typescript-config/is-valid": "off",
+    "no-inline-styles": "off",
+    "axe/name-role-value": "off",
+    "axe/forms": "off",
+    "compat-api/css": "off"
+  }
+}
