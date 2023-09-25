@@ -10,7 +10,7 @@ interface ThemeContextType {
     toggle: () => void; 
 }
 
-export const ThemeContext = createContext<ThemeContextType | undefined>( {} as ThemeContextType )
+export const ThemeContext = createContext<ThemeContextType>( {} as ThemeContextType )
 
 const getFromLocalStorage= ()=>{ 
     if (typeof window !== "undefined") {
