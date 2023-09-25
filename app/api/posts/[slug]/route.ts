@@ -2,7 +2,7 @@ import { getAuthSession } from "@/libs/auth";
 import prisma from "@/libs/connect";
 import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async ({params}:{params:any}) => {
+export const GET = async (req: NextRequest,{params}:{params:any}) => {
 
     const { slug } = params
   
