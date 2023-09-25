@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import { useSession } from "next-auth/react";
 import Image from "next/image"
 import { useRouter } from "next/navigation";
@@ -15,6 +14,13 @@ import {
 import { app } from "@/libs/firebase";
 
 const WritePage = () => {
+
+  useEffect(() => {
+    document.title = 'Sling Academy';
+    if(typeof document !== 'undefined') {
+      console.log(document.location.href);
+  }
+}, []);
 
     const [open, setOpen] = useState(false)
     const [value, setValue] = useState("")
@@ -71,13 +77,14 @@ const WritePage = () => {
     file && upload();
   }, [file]);
 
-  const slugify = (str:string) =>
+  const slugify = (str:any) =>
   str
     .toLowerCase()
     .trim()
     .replace(/[^\w\s-]/g, "")
     .replace(/[\s_-]+/g, "-")
     .replace(/^-+|-+$/g, "");
+
 
 
   const handleSubmit = async () => {
@@ -98,15 +105,7 @@ const WritePage = () => {
     }
   };
 
-  useEffect(() => {
-    // Check if the code is running on the client-side (browser)
-    if (typeof document !== "undefined") {
-      // Place your client-side code here
-      // For example:
-      // You can access the document object here
-      // This code will only execute in the browser
-    }
-  }, []);
+
 
   return (
     <div className="mt-12">
