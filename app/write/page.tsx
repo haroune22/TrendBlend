@@ -98,6 +98,16 @@ const WritePage = () => {
     }
   };
 
+  useEffect(() => {
+    // Check if the code is running on the client-side (browser)
+    if (typeof document !== "undefined") {
+      // Place your client-side code here
+      // For example:
+      // You can access the document object here
+      // This code will only execute in the browser
+    }
+  }, []);
+
   return (
     <div className="mt-12">
         <input type="text" onChange={(e) => setTitle(e.target.value)}  placeholder="Title" className="mb-10 p-12 text-4xl border-none outline-none bg-transparent"/>
